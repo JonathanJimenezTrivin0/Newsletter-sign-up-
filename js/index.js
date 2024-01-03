@@ -3,6 +3,7 @@ const ERROR = document.querySelector(".form_error");
 const THAKS = document.querySelector(".thanks");
 const DESCRIPTION = document.querySelector(".main");
 const INPUT = document.querySelector(".form_email");
+const VALIDATION = document.querySelector(".validation-email");
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -14,6 +15,7 @@ function handleSubmit(e) {
   if (email !== "") {
     THAKS.style.display = "block";
     DESCRIPTION.style.display = "none";
+    VALIDATION.innerHTML = email;
     console.log(result);
     FORM.reset();
   } else {
